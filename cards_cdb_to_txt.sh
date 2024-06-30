@@ -1,5 +1,5 @@
 #!/bin/bash
-#creat cards_datas.txt
+#create cards_datas.txt
 rm -rf ./cards_datas.txt
 touch ./cards_datas.txt
 sqlite3 ../cards.cdb << EOF
@@ -8,7 +8,7 @@ sqlite3 ../cards.cdb << EOF
 SELECT * FROM datas;
 .exit
 EOF
-#creat cards_texts.txt
+#create cards_texts.txt
 rm -rf ./cards_texts.txt
 touch ./cards_texts.txt
 sqlite3 ../cards.cdb << EOF
