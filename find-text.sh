@@ -3,7 +3,7 @@
 cards_texts_path="./cards-texts.txt"
 
 if [[ ! -e "$cards_texts_path" ]]; then
-    ./cards_cdb_to_txt.sh
+    ./cards-cdb-to-txt.sh
 fi
 
 use_last_result=false
