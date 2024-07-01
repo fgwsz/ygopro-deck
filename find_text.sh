@@ -1,5 +1,11 @@
 #!/bin/bash
 
+cards_texts_path="./cards_texts.txt"
+
+if [[ ! -e "$cards_texts_path" ]]; then
+    ./cards_cdb_to_txt.sh
+fi
+
 use_last_result=false
 last_result=""
 is_found=false
@@ -10,7 +16,7 @@ do
     if $use_last_result; then
         last_result=$(grep "$regex_pattern" <<< "$last_result" 2>/dev/null)
     else
-        last_result=$(grep "$regex_pattern" ./cards_texts.txt 2>/dev/null)
+        last_result=$(grep "$regex_pattern" "$cards_texts_path" 2>/dev/null)
     fi
     if [[ -z $last_result ]]; then
         is_found=false
