@@ -6,6 +6,7 @@ if [ "$commit_info" != "q" ]; then
     git add cards_cdb_to_txt.sh
     git add README.md
     git add .gitignore
+    git add find_*.sh
     git add git_push.sh
     git commit -m "$commit_info"
     git push
