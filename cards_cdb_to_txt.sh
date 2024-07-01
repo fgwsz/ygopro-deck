@@ -17,7 +17,8 @@ SELECT * FROM texts;
 .exit
 EOF
 #handle cards_texts.txt
-vim -c "%s/\n//g" -c "%s/||//g" -c "wq!" ./cards_texts.txt
+#vim -c "%s/\n//g" -c "%s/||//g" -c "wq!" ./cards_texts.txt
+vim -c "%s/\r\n//g" -c "%s/||//g" -c "wq!" ./cards_texts.txt
 #set readonly
 chmod a-w ./cards_datas.txt
 chmod a-w ./cards_texts.txt
