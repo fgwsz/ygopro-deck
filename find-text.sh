@@ -2,14 +2,20 @@
 
 cards_texts_path="./cards-texts.txt"
 
+#check texts
 if [[ ! -e "$cards_texts_path" ]]; then
     ./cards-cdb-to-txt.sh
+fi
+if [[ ! -e "$cards_texts_path" ]]; then
+    echo "$cards_texts_path not found!"
+    exit 1
 fi
 
 use_last_result=false
 last_result=""
 is_found=false
 
+#find text
 while true
 do
     read -p "Input Regex Pattern: " regex_pattern

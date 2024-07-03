@@ -1,36 +1,42 @@
 #!/bin/bash
 
-if [[ ! -e "../cards.cdb" ]]; then
-    echo "../cards.cdb not found!"
+cards_cdb_path="../cards.cdb"
+
+#check cards cdb
+if [[ ! -e "$cards_cdb_path" ]]; then
+    echo "$cards_cdb_path not found!"
     exit 1
 fi
 
+cards_datas_path="./cards-datas.txt"
+cards_texts_path="./cards-texts.txt"
+
 #create cards-datas.txt
-if [[ -e "./cards-datas.txt" ]]; then
-    rm -rf ./cards-datas.txt
+if [[ -e "$cards_datas_path" ]]; then
+    rm -rf "$cards_datas_path"
 fi
-touch ./cards-datas.txt
-sqlite3 ../cards.cdb << EOF
+touch "$cards_datas_path"
+sqlite3 "$cards_cdb_path" << EOF
 .mode column
-.output ./cards-datas.txt
+.output "$cards_datas_path"
 SELECT * FROM datas;
 .exit
 EOF
 
 #create cards-texts.txt
-if [[ -e "./cards-texts.txt" ]]; then
-    rm -rf ./cards-texts.txt
+if [[ -e "$cards_texts_path" ]]; then
+    rm -rf "$cards_texts_path"
 fi
-touch ./cards-texts.txt
-sqlite3 ../cards.cdb << EOF
-.output ./cards-texts.txt
+touch "$cards_texts_path"
+sqlite3 "$cards_cdb_path" << EOF
+.output "$cards_texts_path"
 SELECT * FROM texts;
 .exit
 EOF
 
 #handle cards-texts.txt
-vim -c "%s/\r\n//g" -c "%s/||//g" -c "wq!" ./cards-texts.txt
+vim -c "%s/\r\n//g" -c "%s/||//g" -c "wq!" "$cards_texts_path"
 
 #set readonly
-chmod a-w ./cards-datas.txt
-chmod a-w ./cards-texts.txt
+chmod a-w "$cards_datas_path"
+chmod a-w "$cards_texts_path"
