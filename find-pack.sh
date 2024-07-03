@@ -1,4 +1,10 @@
 #!/bin/bash
+
+if [[ ! -e "../pack" ]]; then
+    echo "../pack not found!"
+    exit 1
+fi
+
 read -p "Input Card ID: " card_id
 regex_pattern="[0-9]{5,8}"
 if [[ $card_id =~ $regex_pattern ]]; then
