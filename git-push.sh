@@ -11,6 +11,7 @@ if [ "$commit_info" != "q" ]; then
     git add find-*.sh
     git add install.sh
     git add git-push.sh
+    git add auto-push.sh
     git commit -m "$commit_info"
     git push
 fi
