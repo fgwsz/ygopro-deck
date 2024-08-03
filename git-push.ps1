@@ -1,8 +1,6 @@
-#!/bin/bash
-
 echo "You Can Input q For Abort."
-read -p "Input Git Commit Info: " commit_info
-if [ "$commit_info" != "q" ]; then
+$commit_info=Read-Host -Prompt "Input Git Commit Info"
+if(!($commit_info -eq "q")){
     git add 408/*.ydk
     git add ocg/*.ydk
     git add README.md
@@ -11,4 +9,4 @@ if [ "$commit_info" != "q" ]; then
     git add *.ps1
     git commit -m "$commit_info"
     git push
-fi
+}
