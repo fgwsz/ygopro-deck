@@ -1,8 +1,9 @@
 #!/bin/bash
 
+root_path=$(dirname "$(readlink -f "$0")")
 #check pack
-if [[ ! -e "../pack" ]]; then
-    echo "../pack not found!"
+if [[ ! -e "$root_path/../pack" ]]; then
+    echo "$root_path/../pack not found!"
     exit 1
 fi
 

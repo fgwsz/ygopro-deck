@@ -1,6 +1,7 @@
 #!/bin/bash
 
-cards_cdb_path="../cards.cdb"
+root_path=$(dirname "$(readlink -f "$0")")
+cards_cdb_path="$root_path/../cards.cdb"
 
 #check cards cdb
 if [[ ! -e "$cards_cdb_path" ]]; then
@@ -8,8 +9,8 @@ if [[ ! -e "$cards_cdb_path" ]]; then
     exit 1
 fi
 
-cards_datas_path="./cards-datas.txt"
-cards_texts_path="./cards-texts.txt"
+cards_datas_path="$root_path/cards-datas.txt"
+cards_texts_path="$root_path/cards-texts.txt"
 
 #create cards-datas.txt
 if [[ -e "$cards_datas_path" ]]; then

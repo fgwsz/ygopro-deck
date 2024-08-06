@@ -1,10 +1,11 @@
 #!/bin/bash
 
-cards_datas_path="./cards-datas.txt"
+root_path=$(dirname "$(readlink -f "$0")")
+cards_datas_path="$root_path/cards-datas.txt"
 
 #check cards datas
 if [[ ! -e "$cards_datas_path" ]]; then
-    ./cards-cdb-to-txt.sh
+    "$root_path/cards-cdb-to-txt.sh"
 fi
 if [[ ! -e "$cards_datas_path" ]]; then
     echo "$cards_datas_path not found!"
