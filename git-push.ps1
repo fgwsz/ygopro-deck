@@ -11,5 +11,5 @@ if(!($commit_info -eq "q")){
     git add *.sh
     git add *.ps1
     git commit -m "$commit_info"
-    git push --force
+    git push
 }
