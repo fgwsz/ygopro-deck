@@ -6,4 +6,4 @@ git add ocg/*.ydk
 git add 408/*.ydk
 git add 2011_11_11/*.ydk
 git commit -m "Update deck."
-git push
+git push --force

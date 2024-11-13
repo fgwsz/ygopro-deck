@@ -13,5 +13,5 @@ if [ "$commit_info" != "q" ]; then
     git add *.sh
     git add *.ps1
     git commit -m "$commit_info"
-    git push
+    git push --force
 fi
