@@ -10,7 +10,7 @@ if git diff --quiet --cached && git diff --quiet; then
 fi
 
 # 提交并推送
-igt status
+git status
 git add -A ocg/*.ydk 408/*.ydk 2011_11_11/*.ydk
 git commit -m "自动提交卡组变更"
 git push
