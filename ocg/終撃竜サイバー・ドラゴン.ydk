@@ -1,4 +1,4 @@
-#created by ...
+﻿#created by MDPro3
 #main
 70095154
 70095154
@@ -52,3 +52,21 @@
 98462037
 60303245
 !side
+#pickup
+#0
+#0
+#0
+#case
+#1080001
+#protector
+#1070001
+#field
+#1090001
+#grave
+#1100001
+#stand
+#1110001
+#mate
+#1000001
+##8c4c2be1b3
+###301322
