@@ -4,6 +4,7 @@ $commit_info=Read-Host -Prompt "Input Git Commit Info"
 if(!($commit_info -eq "q")){
     cd "$root_path"
     git add ocg/*.ydk
+    git add mdpro3/*.ydk
     git add 408/*.ydk
     git add 2011_11_11/*.ydk
     git add README.md
