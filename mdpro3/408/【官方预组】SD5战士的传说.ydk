@@ -1,4 +1,3 @@
-﻿#created by MDPro3
 #main
 11321183
 69933858
@@ -42,22 +41,11 @@
 77414722
 #extra
 !side
-301322
-#pickup
-#0
-#0
-#0
-#case
-#1080001
-#protector
-#1070001
-#field
-#1090001
-#grave
-#1100001
-#stand
-#1110001
-#mate
-#1000001
+#spare
+#representative
+$69933858$
+$57046845$
+$31423101$
+
 ##118c827f9a
-###FGwsz
+###301322
