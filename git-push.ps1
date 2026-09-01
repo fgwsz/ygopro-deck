@@ -7,6 +7,7 @@ if(!($commit_info -eq "q")){
     git add mdpro3/*.ydk
     git add 408/*.ydk
     git add 2011_11_11/*.ydk
+    git add 706/*.ydk
     git add README.md
     git add .gitignore
     git add *.sh
